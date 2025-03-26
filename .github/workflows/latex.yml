@@ -18,7 +18,9 @@ jobs:
       - name: Set up git
         uses: actions/checkout@v2
       - name: Compile latex
-        uses: dante-ev/latex-action@latest
+        uses: vinay0410/tectonic-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          root_file: proposal-for-projects-2025.tex
-          compiler: pdflatex
+          tex-path: proposal-for-projects-2025.tex
+          push: yes
