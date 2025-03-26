@@ -18,9 +18,9 @@ jobs:
       - name: Set up git
         uses: actions/checkout@v2
       - name: Compile latex
-        uses: vinay0410/tectonic-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: thomas-chauvet/latex2pdf-action@1.1.0
         with:
-          tex_path: proposal-for-projects-2025.tex
-          push: yes
+          main_latex_file: proposal-for-projects-2025.tex
+          ctan_packages: subfiles
+          output_dir: .
+          toc: true
