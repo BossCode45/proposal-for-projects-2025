@@ -22,5 +22,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tex-path: proposal-for-projects-2025.tex
+          tex_path: proposal-for-projects-2025.tex
           push: yes
